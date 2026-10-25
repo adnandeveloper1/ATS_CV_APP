@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="48dp">
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textColor="#111111"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:includeFontPadding="false" />
+
+        <!-- Job Title -->
+        <TextView
+            android:id="@+id/tvJobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB TITLE"
+            android:textColor="#222222"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#222222"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Email + Phone Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="email@gmail.com"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="(000) 000-0000"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- TO HIRING MANAGER -->
+        <TextView
+            android:id="@+id/tvToHiringManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO HIRING MANAGER"
+            android:textColor="#111111"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Company Name -->
+        <TextView
+            android:id="@+id/tvCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company Name"
+            android:textColor="#222222"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Thin Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#222222"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dear Hiring Manager,"
+            android:textColor="#111111"
+            android:textSize="14sp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Body -->
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body text will appear here..."
+            android:textColor="#222222"
+            android:textSize="14sp"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Closing -->
+        <TextView
+            android:id="@+id/tvClosing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sincerely,"
+            android:textColor="#111111"
+            android:textSize="14sp"
+            android:layout_marginBottom="18dp" />
+
+        <!-- Signature -->
+        <TextView
+            android:id="@+id/tvSignature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textColor="#111111"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

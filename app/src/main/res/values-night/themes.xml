@@ -1,0 +1,8 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Resume_Builder_App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+    </style>
+
+    <style name="Theme.Resume_Builder_App" parent="Base.Theme.Resume_Builder_App" />
+</resources>

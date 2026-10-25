@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_templates"
+        android:icon="@drawable/ic_create"
+        android:title="Templates" />
+
+    <!-- Center Placeholder item for FAB positioning -->
+    <item
+        android:id="@+id/nav_placeholder"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_docs"
+        android:icon="@drawable/resume"
+        android:title="My Docs" />
+</menu>

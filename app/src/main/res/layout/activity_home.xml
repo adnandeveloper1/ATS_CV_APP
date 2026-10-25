@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    tools:context=".Activities.HomeActivity">
+
+    <!-- Scrollable Content View -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingBottom="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 1. Header Section (Greeting + Subtitle) -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ResumePro"
+                    android:textColor="#0F172A"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Build your future, one document at a time."
+                    android:textColor="#64748B"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvGreeting" />
+
+                <ImageView
+                    android:id="@+id/btnSettings"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="Settings"
+                    android:src="@drawable/baseline_settings_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvGreeting"
+                    app:tint="#475569" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 2. Create Resume Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardCreateResume"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_blue_card"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iconResume"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_create"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#2563EB" />
+
+                <TextView
+                    android:id="@+id/tvTitleResume"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Create Resume"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/arrowResumeTop"
+                    app:layout_constraintStart_toEndOf="@id/iconResume"
+                    app:layout_constraintTop_toTopOf="@id/iconResume" />
+
+                <TextView
+                    android:id="@+id/tvDescResume"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Build a professional resume from scratch or use a template."
+                    android:textColor="#E0E7FF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/arrowResumeTop"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleResume"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleResume" />
+
+                <ImageView
+                    android:id="@+id/arrowResumeTop"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_send"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvTitleResume"
+                    app:tint="#FFFFFF" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 3. Create Cover Letter Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardCreateCoverLetter"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_purple_card"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iconCoverLetter"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="14dp"
+                    android:src="@drawable/resume"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#6366F1" />
+
+                <TextView
+                    android:id="@+id/tvTitleCoverLetter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Create Cover Letter"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/arrowCoverTop"
+                    app:layout_constraintStart_toEndOf="@id/iconCoverLetter"
+                    app:layout_constraintTop_toTopOf="@id/iconCoverLetter" />
+
+                <TextView
+                    android:id="@+id/tvDescCoverLetter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Write a personalized cover letter for your next job."
+                    android:textColor="#E0E7FF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/arrowCoverTop"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleCoverLetter"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleCoverLetter" />
+
+                <ImageView
+                    android:id="@+id/arrowCoverTop"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_send"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvTitleCoverLetter"
+                    app:tint="#FFFFFF" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 4. "My Documents" Title Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/tvMyDocs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Documents"
+                    android:textColor="#0F172A"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:textColor="#2563EB"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 5. Dynamic Document List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDocuments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_document" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Curved App Bar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#FFFFFF"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="8dp"
+        app:fabCradleRoundedCornerRadius="16dp"
+        app:fabCradleVerticalOffset="4dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:itemRippleColor="#1A2563EB"
+            app:itemTextColor="@color/bottom_nav_color"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!-- Floating Home Action Button (Fixed Center) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2563EB"
+        android:contentDescription="Home"
+        android:src="@drawable/ic_home"
+        app:borderWidth="0dp"
+        app:elevation="4dp"
+        app:layout_anchor="@id/bottomAppBar"
+        app:maxImageSize="24dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+        app:tint="#FFFFFF" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
