@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.resume_builder_app"
+    namespace = "com.nexappra.resumebuilder" // <-- Change this
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.resume_builder_app"
+        applicationId = "com.nexappra.resumebuilder" // <-- Change this
         minSdk = 24
         targetSdk = 37
         versionCode = 1
