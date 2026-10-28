@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.nexappra.resumebuilder" // <-- Change this
+    namespace = "com.example.resumebuilder"
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.nexappra.resumebuilder" // <-- Change this
+        applicationId = "com.example.resumebuilder"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.gson)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)

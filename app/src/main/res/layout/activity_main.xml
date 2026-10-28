@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
 android:background="@color/screen_background"
-    tools:context=".Activities.MainActivity">
+    tools:context="com.example.Activities.MainActivity">
 
     <!-- Center Resume Icon / Illustration -->
     <ImageView

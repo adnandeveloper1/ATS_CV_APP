@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Resume_Builder_App">
         <activity
-            android:name=".Activities.MainActivity"
+            android:name="com.example.Activities.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -22,51 +22,59 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.OnBording"
+            android:name="com.example.Activities.OnBording"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.HomeActivity"
+            android:name="com.example.Activities.HomeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.ResumeActivity"
+            android:name="com.example.Activities.ResumeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.TemplatesActivity"
+            android:name="com.example.Activities.TemplatesActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.ProfessionalActivity"
+            android:name="com.example.Activities.ProfessionalActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.ModernActivity"
+            android:name="com.example.Activities.ModernActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.MinimalActivity"
+            android:name="com.example.Activities.MinimalActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.CreativeActivity"
+            android:name="com.example.Activities.CreativeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.CoverLetterActivity"
+            android:name="com.example.Activities.CoverLetterActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.professionalCoverletter"
+            android:name="com.example.Activities.professionalCoverletter"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.Creative_coverletter"
+            android:name="com.example.Activities.Creative_coverletter"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activities.minimalCoverletterActivity"
+            android:name="com.example.Activities.Minimal_coverletter"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.example.Activities.SettingActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.example.Activities.MyDocsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

@@ -60,7 +60,8 @@
                 android:layout_weight="1"
                 android:text="email@gmail.com"
                 android:textColor="#333333"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp" />
 
             <TextView
                 android:id="@+id/tvPhone"
@@ -70,7 +71,8 @@
                 android:text="(000) 000-0000"
                 android:textColor="#333333"
                 android:textSize="12sp"
-                android:gravity="end" />
+                android:gravity="end"
+                android:lineSpacingExtra="2dp" />
         </LinearLayout>
 
         <!-- TO HIRING MANAGER -->
@@ -93,6 +95,7 @@
             android:text="Company Name"
             android:textColor="#222222"
             android:textSize="13sp"
+            android:lineSpacingExtra="4dp"
             android:layout_marginBottom="12dp" />
 
         <!-- Thin Divider -->
@@ -120,7 +123,8 @@
             android:text="Body text will appear here..."
             android:textColor="#222222"
             android:textSize="14sp"
-            android:lineSpacingExtra="3dp"
+            android:lineSpacingExtra="6dp"
+            android:lineSpacingMultiplier="1.2"
             android:layout_marginBottom="24dp" />
 
         <!-- Closing -->
@@ -129,6 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sincerely,"
+            android:layout_marginTop="12dp"
             android:textColor="#111111"
             android:textSize="14sp"
             android:layout_marginBottom="18dp" />
@@ -139,6 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your Name"
+            android:layout_marginTop="4dp"
             android:textColor="#111111"
             android:textSize="14sp" />
 

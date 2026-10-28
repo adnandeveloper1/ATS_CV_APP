@@ -3,6 +3,7 @@ package com.example.resumebuilder.Activities
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,13 @@ class PersonalFragment : Fragment() {
 
     private val sharedViewModel: SharedResumeViewModel by activityViewModels()
 
+    private var etName: EditText? = null
+    private var etAddress: EditText? = null
+    private var etEmail: EditText? = null
+    private var etPhone: EditText? = null
+    private var etRole: EditText? = null
+    private var etSummary: EditText? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,28 +36,79 @@ class PersonalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val etName = view.findViewById<EditText>(R.id.et_name)
-        val etAddress = view.findViewById<EditText>(R.id.etLocation)
-        val etEmail = view.findViewById<EditText>(R.id.et_email)
-        val etPhone = view.findViewById<EditText>(R.id.et_Phone)
-        val etRole = view.findViewById<EditText>(R.id.role)
-        val etSummary = view.findViewById<EditText>(R.id.introduction)
+        // Bind Views
+        etName = view.findViewById(R.id.et_name)
+        etAddress = view.findViewById(R.id.etLocation)
+        etEmail = view.findViewById(R.id.et_email)
+        etPhone = view.findViewById(R.id.et_Phone)
+        etRole = view.findViewById(R.id.role)
+        etSummary = view.findViewById(R.id.introduction)
 
-        // Restore previous data if available
-        etName?.setText(sharedViewModel.name.value ?: "")
-        etAddress?.setText(sharedViewModel.address.value ?: "")
-        etEmail?.setText(sharedViewModel.email.value ?: "")
-        etPhone?.setText(sharedViewModel.phone.value ?: "")
-        etRole?.setText(sharedViewModel.role.value ?: "")
-        etSummary?.setText(sharedViewModel.summary.value ?: "")
+        // Restore Data
+        etName?.setText(sharedViewModel.name.value ?: ResumeRepository.name)
+        etAddress?.setText(sharedViewModel.address.value ?: ResumeRepository.address)
+        etEmail?.setText(sharedViewModel.email.value ?: ResumeRepository.email)
+        etPhone?.setText(sharedViewModel.phone.value ?: ResumeRepository.phone)
+        etRole?.setText(sharedViewModel.role.value ?: ResumeRepository.role)
+        etSummary?.setText(sharedViewModel.summary.value ?: ResumeRepository.summary)
 
-        // Inside onViewCreated:
+        // Auto Save to Repository on typing
         etName?.addTextChangedListener(createWatcher { ResumeRepository.name = it })
         etAddress?.addTextChangedListener(createWatcher { ResumeRepository.address = it })
         etEmail?.addTextChangedListener(createWatcher { ResumeRepository.email = it })
         etPhone?.addTextChangedListener(createWatcher { ResumeRepository.phone = it })
         etRole?.addTextChangedListener(createWatcher { ResumeRepository.role = it })
         etSummary?.addTextChangedListener(createWatcher { ResumeRepository.summary = it })
+    }
+
+    /**
+     * Called by ResumeActivity to validate input before proceeding
+     */
+    fun validateAndSave(): Boolean {
+        val name = etName?.text.toString().trim()
+        val email = etEmail?.text.toString().trim()
+        val phone = etPhone?.text.toString().trim()
+        val role = etRole?.text.toString().trim()
+
+        if (name.isEmpty()) {
+            etName?.error = "Full Name is required"
+            etName?.requestFocus()
+            return false
+        }
+
+        if (email.isEmpty()) {
+            etEmail?.error = "Email is required"
+            etEmail?.requestFocus()
+            return false
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            etEmail?.error = "Enter a valid email address"
+            etEmail?.requestFocus()
+            return false
+        }
+
+        if (phone.isEmpty()) {
+            etPhone?.error = "Phone number is required"
+            etPhone?.requestFocus()
+            return false
+        }
+
+        if (role.isEmpty()) {
+            etRole?.error = "Job Title / Role is required"
+            etRole?.requestFocus()
+            return false
+        }
+
+        // Store into ViewModel & Repository
+        sharedViewModel.name.value = name
+        sharedViewModel.email.value = email
+        sharedViewModel.phone.value = phone
+        sharedViewModel.role.value = role
+        sharedViewModel.address.value = etAddress?.text.toString().trim()
+        sharedViewModel.summary.value = etSummary?.text.toString().trim()
+
+        return true
     }
 
     private fun createWatcher(onChanged: (String) -> Unit): TextWatcher {

@@ -13,6 +13,7 @@
     <color name="dot_inactive">#CFD8DC</color>
     <color name="button_bg">#3371FF</color>
     <color name="button_text">@android:color/white</color>
+    <color name="blue">#2460FF</color>
 
 
 </resources>

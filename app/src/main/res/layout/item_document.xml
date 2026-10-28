@@ -16,7 +16,7 @@
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/docIcon"
+            android:id="@+id/ivDocIcon"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:background="#EFF6FF"
@@ -27,7 +27,7 @@
             app:tint="#2563EB" />
 
         <TextView
-            android:id="@+id/tvDocName"
+            android:id="@+id/tvDocTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -35,7 +35,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/arrowDoc"
-            app:layout_constraintStart_toEndOf="@id/docIcon"
+            app:layout_constraintStart_toEndOf="@id/ivDocIcon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -46,8 +46,8 @@
             android:textColor="#94A3B8"
             android:textSize="12sp"
             app:layout_constraintEnd_toStartOf="@id/arrowDoc"
-            app:layout_constraintStart_toStartOf="@id/tvDocName"
-            app:layout_constraintTop_toBottomOf="@id/tvDocName" />
+            app:layout_constraintStart_toStartOf="@id/tvDocTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvDocTitle" />
 
         <ImageView
             android:id="@+id/arrowDoc"

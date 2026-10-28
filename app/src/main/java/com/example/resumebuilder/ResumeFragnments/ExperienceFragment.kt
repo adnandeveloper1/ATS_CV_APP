@@ -1,4 +1,4 @@
-package com.example.resumebuilder.fragments
+package com.example.resumebuilder.ResumeFragnments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.resume_builder.Dataclass.ResumeRepository
-import com.example.resumebuilder.Adapter.ExperienceAdapter
+import com.example.Adapter.ExperienceAdapter
 import com.example.resumebuilder.R
 import com.example.resumebuilder.models.ExperienceModel
 

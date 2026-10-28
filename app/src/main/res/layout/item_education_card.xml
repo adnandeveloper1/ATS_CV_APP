@@ -41,6 +41,7 @@
                 android:layout_centerVertical="true"
                 android:contentDescription="Delete"
                 android:src="@drawable/delete"
+                app:tint="#EF4444"
                 />
         </RelativeLayout>
 

@@ -1,4 +1,4 @@
-package com.example.resumebuilder.fragments
+package com.example.resumebuilder.ResumeFragnments
 
 import android.os.Bundle
 import android.view.LayoutInflater
